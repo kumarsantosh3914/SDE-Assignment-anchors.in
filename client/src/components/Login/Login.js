@@ -42,10 +42,9 @@ const Login = () => {
       <div className="main">
         <div className="login_form_left">
           <div className="signin">
-            <div className="signin_main">Sign in</div>
+            <div className="signin_main">Account</div>
             <div className="login_form_main">
               <div className="username">
-                <div className="username_text">Email</div>
                 <input
                   type="email"
                   id="email"
@@ -56,7 +55,6 @@ const Login = () => {
                 />
               </div>
               <div className="password">
-                <div className="password_text">Password</div>
                 <input
                   type="password"
                   placeholder="Enter your Password"
@@ -68,14 +66,8 @@ const Login = () => {
               </div>
               <div className="error">{error}</div>
               <button onClick={submitHandler} className="login_button btn">
-                <div className="login_text btn">Login</div>
+                <div className="login_text btn">Continue</div>
               </button>
-            </div>
-            <div className="register">
-              Don’t have an Account ?{" "}
-              <Link to={"/signup"} className="register_text">
-                Register
-              </Link>
             </div>
           </div>
         </div>

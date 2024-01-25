@@ -11,21 +11,16 @@
 .login {
     display: flex;
     height: 100vh;
-    background: var(--white);
+    background: #000;
 }
-
 
 .login_form_left {
     box-sizing: border-box;
     max-width: 505px;
-    background: var(--white);
+    background: #282828;
     border: 0.5px solid #878787;
     box-shadow: 0px 4px 64px rgba(0, 0, 0, 0.05);
     border-radius: 10px;
-}
-
-.login_image2 {
-    width: 50%;
 }
 
 .login_welcome {
@@ -33,47 +28,39 @@
     height: 38px;
     left: 146px;
     top: 150px;
-
     font-family: "Poppins";
     font-style: normal;
     font-weight: 300;
     font-size: 25px;
     line-height: 38px;
-
-    color: var(--red);
+    color: #fff;
 }
 
 .signin {
     width: 503px;
-    height: 548px;
+    height: 448px;
 }
 
 .signin_main {
     margin-top: 10px;
     margin-left: 20px;
+    margin-bottom: 259px;
     width: 144px;
-    height: 100px;
+    height: 30px;
     left: 146px;
     top: 217px;
     font-family: "Poppins";
     font-style: normal;
     font-weight: 500;
     font-size: 31px;
-    line-height: 46px;
-    color: var(--red);
+    color: #fff;
     margin-bottom: 48px;
 }
 
-.username {
-    width: 423px;
-    height: 92px;
-}
-
+.username,
 .password {
     width: 423px;
-    height: 92px;
-    left: 146px;
-    top: 467px;
+    height: 82px;
 }
 
 .remember {
@@ -101,10 +88,11 @@
     left: 146px;
     top: 638px;
     margin-left: 20px;
-    background: var(--red);
-    border-radius: 6px;
+    background: #282828;
+    border-radius: 50px;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .forget {
@@ -112,13 +100,11 @@
     height: 18px;
     left: 461px;
     top: 582px;
-
     font-family: "Poppins";
     font-style: normal;
     font-weight: 300;
     font-size: 12px;
     line-height: 18px;
-
     color: #4d4d4d;
 }
 
@@ -128,42 +114,22 @@
     height: 18px;
     left: 171px;
     top: 582px;
-
     font-family: "Poppins";
     font-style: normal;
     font-weight: 300;
     font-size: 12px;
     line-height: 18px;
-
-    color: var(--red);
+    color: #fff;
 }
 
 .check {
     box-sizing: border-box;
-
     width: 15px;
     height: 15px;
     left: 146px;
     top: 585px;
-
     background: var(--white);
     border: 1px solid var(--red);
-}
-
-.register {
-    width: 271px;
-    height: 24px;
-    left: 223px;
-    top: 751px;
-    margin-left: 20px;
-    margin-top: 20px;
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 24px;
-
-    color: #7d7d7d;
 }
 
 .inp {
@@ -189,40 +155,7 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-
     color: var(--white);
-}
-
-.login_image {
-    width: 827px;
-    height: 586px;
-    left: 598px;
-    top: 127px;
-}
-
-.register_text {
-    color: var(--red);
-}
-
-.username_text {
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-
-    margin-left: 20px;
-    color: var(--red);
-}
-
-.password_text {
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    margin-left: 20px;
-    color: var(--red);
 }
 
 @media screen and (max-width: 1055px) {

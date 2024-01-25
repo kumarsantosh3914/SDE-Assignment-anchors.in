@@ -1,6 +1,6 @@
 :root {
     --light: #d8c3a5;
-    --white: #d2e1c7;
+    --white: #fff;
     --grey: #8e8d8a;
     --tamato: #e98074;
     --red: #e85a4f;
@@ -13,10 +13,19 @@
     height: 100vh;
     margin: auto;
     max-width: 600px;
+    background-color: var(--light);
+}
+
+.post {
+    background-color: var(--white);
+    border: 2px solid var(--red);
+    border-radius: 20px;
+    margin-top: 20px;
+    width: 100%;
 }
 
 .inputPost {
-    border: 2px solid black;
+    border: 2px solid var(--grey);
     width: 100%;
     border-radius: 20px;
 }
@@ -28,6 +37,9 @@
     outline: none;
     border: 0;
     background: transparent;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 16px;
 }
 
 .inputPostButton {
@@ -38,17 +50,22 @@
     border-radius: 30px;
     border: 0;
     color: white;
+    cursor: pointer;
+}
+
+.postUsername, .replyName {
+    padding: 8px;
+    margin: 5px;
+    background: var(--grey);
+    border-radius: 30px;
+    border: 0;
+    color: white;
+    width: max-content;
 }
 
 .text {
-    font-size: 2.5rem;
-}
-
-.post {
-    border: 2px solid var(--red);
-    border-radius: 20px;
-    margin-top: 20px;
-    width: 100%;
+    font-size: 1.8rem;
+    margin-left: 20px;
 }
 
 .wrapperComment {
@@ -62,38 +79,18 @@
     outline: none;
     border: 0;
     background: transparent;
-    border: 1px solid rgb(218, 181, 181);
+    border: 1px solid var(--grey);
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 14px;
 }
 
-.postUsername {
-    padding: 6px;
-    font-size: 1.3rem;
-    margin: 5px;
-    background: hwb(40 28% 31%);
-    border-radius: 30px;
-    border: 0;
-    color: white;
-    width: max-content;
+.comment, .replyText {
+    margin-left: 20px;
 }
 
-.replyName {
-    padding: 8px;
-    margin: 5px;
-    background: var(--grey);
-    border-radius: 30px;
-    border: 0;
-    color: white;
-    width: max-content;
-}
-
-hr {
-    background-color: var(--grey);
-    height: 1px;
-
-}
-
-.replyText {
-    margin-left: 54px;
+.comments {
+    margin-top: 20px;
 }
 
 .submit {
@@ -103,4 +100,17 @@ hr {
     border-radius: 30px;
     border: 0;
     color: white;
+    cursor: pointer;
+}
+
+hr {
+    background-color: var(--grey);
+    height: 1px;
+    border: none;
+}
+
+@media screen and (max-width: 600px) {
+    .inputText, .replyInp {
+        width: 100%;
+    }
 }

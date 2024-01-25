@@ -118,76 +118,84 @@ const Home = () => {
     }
   };
   return (
-    <div className="home">
-      <div className="inputPost">
-        <textarea
-          placeholder="Tell your Suggestions..."
-          className="inputText"
-          value={postInp}
-          onChange={(e) => setPostInp(e.target.value)}
-        ></textarea>
-        <button className="inputPostButton" onClick={handleSubmit}>
-          Post
-        </button>
-      </div>
-      {topics.map((topic, i) => {
-        return (
-          <div className="post">
-            <div className="postUsername">{topic.username}</div>
-            <hr />
-            <div className="text wrapperComment">{topic.topic}</div>
-            <div className="comments">
-              <div className="reply">
-                <input type="text" className="replyInp" id={topic._id} />
-                <button
-                  className="submit"
-                  onClick={() => submitComment(topic._id)}
-                >
-                  Comment
-                </button>
-              </div>
+    <div className="post">
+      <div className="home">
+        <div className="inputPost">
+          <textarea
+            placeholder="Tell your Suggestions..."
+            className="inputText"
+            value={postInp}
+            onChange={(e) => setPostInp(e.target.value)}
+          ></textarea>
+          <button className="inputPostButton" onClick={handleSubmit}>
+            Post
+          </button>
+        </div>
+        {topics.map((topic, i) => {
+          return (
+            <div className="post">
+              <div className="postUsername">{topic.username}</div>
               <hr />
-              {topic.comments.map((comment, j) => {
-                return (
-                  <div className="comment">
-                    <div className="commentText">
-                      <div className="wrapper">
-                        <div className="replyName">{comment.username}</div>
-                        <div className="wrapperComment">{comment.comment}</div>
-                        <div className="reply">
-                          <input
-                            type="text"
-                            className="replyInp"
-                            id={comment._id}
-                          />
-                          <button
-                            className="submit"
-                            onClick={() => replyComment(topic._id, comment._id)}
-                          >
-                            Reply
-                          </button>
-                        </div>
-                        {comment.replies.map((reply, k) => {
-                          return (
-                            <div className="replyText">
-                              <div className="replyName">{reply.username}</div>
-                              <div className="wrapperComment2">
-                                {reply.reply}
+              <div className="text wrapperComment">{topic.topic}</div>
+              <div className="comments">
+                <div className="reply">
+                  <input type="text" className="replyInp" id={topic._id} />
+                  <button
+                    className="submit"
+                    onClick={() => submitComment(topic._id)}
+                  >
+                    Comment
+                  </button>
+                </div>
+                <hr />
+                {topic.comments.map((comment, j) => {
+                  return (
+                    <div className="comment">
+                      <div className="commentText">
+                        <div className="wrapper">
+                          <div className="replyName">{comment.username}</div>
+                          <div className="wrapperComment">
+                            {comment.comment}
+                          </div>
+                          <div className="reply">
+                            <input
+                              type="text"
+                              className="replyInp"
+                              id={comment._id}
+                            />
+                            <button
+                              className="submit"
+                              onClick={() =>
+                                replyComment(topic._id, comment._id)
+                              }
+                            >
+                              Reply
+                            </button>
+                          </div>
+                          {comment.replies.map((reply, k) => {
+                            return (
+                              <div className="replyText">
+                                <div className="replyName">
+                                  {reply.username}
+                                </div>
+                                <div className="wrapperComment2">
+                                  {reply.reply}
+                                </div>
                               </div>
-                            </div>
-                          );
-                        })}
+                            );
+                          })}
+                        </div>
                       </div>
-                    </div>
 
-                    <hr />
-                  </div>
-                );
-              })}
+                      <hr />
+                    </div>
+                  );
+                })}
+              </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 };

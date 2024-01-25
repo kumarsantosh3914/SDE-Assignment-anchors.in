@@ -69,7 +69,6 @@
 // };
 
 const PostService = require("../services/post-service");
-
 class PostController {
   async createPost(req, res) {
     try {

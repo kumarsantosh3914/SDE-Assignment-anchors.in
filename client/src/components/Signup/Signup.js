@@ -13,7 +13,7 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [optvalue, setOptvalue] = useState("");
   const [id, setId] = useState("");
-  emailjs.init("pPrXHULe-4xrwKwJZ");
+  emailjs.init("diEZ6h21fsoPHUGxm");
   const registerHandler = async () => {
     if (!username || !email || !password) {
       setError("Please fill all the fields");
@@ -37,7 +37,7 @@ const Signup = () => {
         localStorage.setItem("_id", data._id);
         localStorage.setItem("username", data.username);
         localStorage.setItem("email", data.email);
-        emailjs.send("service_8ds3zbs", "template_2e4btfh", {
+        emailjs.send("service_drmc1tb", "template_bac8np2", {
           user_name: username,
           email: email,
           otp: data.otp,
